@@ -11,6 +11,7 @@ RUN apt-get update \
   python3 \
   python3-matplotlib \
   python3-pygments \
+  python3-pip \
   # Tex stuff
   texlive-full \
   texlive-latex-base \
@@ -25,5 +26,6 @@ RUN apt-get update \
   inkscape \
   mscgen \
   latexmk
+RUN pip3 install brokenaxes
 RUN cd /usr/bin && ln -sf python3 python
 CMD ["bash"]
