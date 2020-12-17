@@ -27,5 +27,6 @@ RUN apt-get update \
   mscgen \
   latexmk
 RUN pip3 install brokenaxes
+RUN sed -i 's/^.*policy.*coder.*none.*PDF.*//' /etc/ImageMagick-6/policy.xml
 RUN cd /usr/bin && ln -sf python3 python
 CMD ["bash"]
